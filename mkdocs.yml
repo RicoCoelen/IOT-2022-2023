@@ -18,7 +18,7 @@ theme:
 nav:
     - 'index.md'
     - 'Product' :
-      - 'Product Description' : 'product.md'
+      - 'Product Description' : 'index.md'
       - 'User Manual' : 'user_manual.md'
       - 'Architecture Overview' : 'architecture_overview.md'
     - 'Embedded Device' : 'embedded_device.md'
