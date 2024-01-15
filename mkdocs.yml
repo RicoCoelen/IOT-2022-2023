@@ -1,26 +1,20 @@
-# Replace the text below to customize your site
 site_name: Internet of Things Documentation Page
-site_description: Documentation for Electronic Dice
-site_author: Rico Coelen
-copyright: Copyright 2022 Rico Coelen - Creative Commons Attribution Non Commercial
+site_url: https://ricocoelen.github.io/IOT-2022-2023/
 
-site_url: https://localhost:8000/
-  
 theme:
   name: material
   palette:
-    # try other colors https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
     primary: light blue
     accent: indigo
   font:
-    # See available fonts at https://fonts.google.com/
     text: Arial
-    code: Ubuntu Mono  
-  logo: images/iot_car.svg
-  favicon: images/iot_car.svg
+    code: Ubuntu Mono
+  logo: /IOT-2022-2023/images/iot_car.svg
+  favicon: /IOT-2022-2023/images/iot_car.svg
   features:
     - navigation.instant 
-    - content.code.annotate 
+    - content.code.annotate
+
 nav:
     - 'index.md'
     - 'Product' :
@@ -41,7 +35,6 @@ plugins:
   - search
   - git-revision-date-localized:
       fallback_to_build_date: true
-      # Read more: https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/#enabled
       enabled: !ENV [ENABLED_GIT_REVISION_DATE, False]
 
 markdown_extensions:
