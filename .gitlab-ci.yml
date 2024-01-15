@@ -1,14 +1,35 @@
 image: python:3.9-slim
 
 before_script:
-  - apt-get update && apt-get install -y git
-  - pip install -r requirements.txt
+  # install Git for the mkdocs revision plugin
+  - time apt update && apt-get install -y git
+  # Install mkdocs and theme
+  - time pip install -r requirements.txt
 
-pages:
+test:
+  stage: test
+  tags:
+    - hva
   script:
-    - mkdocs build --site-dir public
+  - time mkdocs build --site-dir test
   artifacts:
     paths:
-      - public
-  only:
-    - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - test
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+
+pages:
+  stage: deploy
+  tags:
+    - hva
+  variables:
+    ENABLED_GIT_REVISION_DATE: "true"
+    GIT_DEPTH: 1000
+  script:
+  - time mkdocs build --site-dir public
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
