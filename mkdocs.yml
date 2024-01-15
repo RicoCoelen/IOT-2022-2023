@@ -18,15 +18,12 @@ theme:
 nav:
     - 'index.md'
     - 'Product' :
-      - 'Product Description' : 'index.md'
       - 'User Manual' : 'user_manual.md'
       - 'Architecture Overview' : 'architecture_overview.md'
     - 'Embedded Device' : 'embedded_device.md'
     - 'Web Application' :
       - 'Documentation' : 'web_application.md'
-      - 'Admin Manual' : 'admin_manual.md'
       - 'API Documentation' : 'api_documentation.md'
-    - 'User Interaction' : 'user_interaction.md'
     - 'Physical Design' : 'physical_design.md'
     - 'Research' : 'research.md'
     - 'Changelog' : 'changelog.md'
