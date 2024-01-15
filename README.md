@@ -1,2 +1,3 @@
-# IOT-2022-2023
-IOT 2022-2023
+# IoT coelenr
+
+Repository of Rico Coelen (500808342)
